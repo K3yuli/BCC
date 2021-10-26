@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+section {
+    padding: 60px;
+}
 body {
     /* more on this crazy alphanumerical value in a minute! */
     color: #39a6b2;
