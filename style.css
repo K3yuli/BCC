@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+/* root global pseudo-class connects with the "var" to change the colors */
 :root {
   --primary-color: #fce138;
   --secondary-color: #024e76;
