@@ -3,16 +3,22 @@
   padding: 0;
 }
 
+:root {
+  --primary-color: #fce138;
+  --secondary-color: #024e76;
+  --tertiary-color: #39a6b2;
+}
+
 body {
   /* more on this crazy alphanumerical value in a minute! */
-  color: #39a6b2;
+  color: var(--tertiary-color);
   font-family: Helvetica, Arial, sans-serif;
 }
 
 /* apply styles to <header> */
 header {
   padding: 20px 35px;
-  background-color: #39a6b2;
+  background-color: var(--tertiary-color);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -21,18 +27,19 @@ header {
   background-position: center;
   background-attachment: fixed;
   background-position: 80%;
+  z-index: 9999;
 }
 header h1 {
   font-weight: bold;
   font-size: 36px;
-  color: #fce138;
+  color: var(--primary-color);
   margin: 0;
   display: inline;
   text-shadow: 0 0 10px rgba(0, 0, 0.5);
 }
 header a {
   text-decoration: none;
-  color: #fce138;
+  color: var(--primary-color);
 }
 header nav {
   float: right;
@@ -50,20 +57,20 @@ header nav ul li a {
 }
 /*button*/
 header nav ul li a:hover {
-  background-color: #fce138;
-  color: #024e76;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   border-radius: 15px;
   text-shadow: none;
 }
 
 footer {
-  background: #fce138;
+  background: var(--primary-color);
   width: 100%;
   padding: 40px 35px;
 }
 footer h2 {
   display: inline;
-  color: #024e76;
+  color: var(--secondary-color);
   font-size: 30px;
   margin: 0;
 }
@@ -73,7 +80,7 @@ footer div {
   text-align: right;
 }
 footer a {
-  color: #024e76;
+  color: var(--secondary-color);
 }
 /* Hero Style Start */
 .hero {
@@ -98,14 +105,14 @@ footer a {
 }
 
 .hero-form {
-  border: 3px solid #024e76;
+  border: 3px solid var(--secondary-color);
   background-color: rgba(252, 225, 56, 0.8);
   padding: 20px;
   width: 500px;
-  color: #024e76;
+  color: var(--secondary-color);
   border-style: solid;
   border-width: 3px;
-  border-color: #024e76;
+  border-color: var(--secondary-color);
   position: absolute;
   bottom: 120px;
   right: 140px;
@@ -113,7 +120,7 @@ footer a {
 }
 /*button*/
 .hero-form button:hover {
-  background-color: #39a6b2;
+  background-color: var(--tertiary-color);
 }
 
 .hero-form p {
@@ -126,11 +133,11 @@ footer a {
 }
 
 .form-input {
-  border: 1px solid #024e76;
+  border: 1px solid var(--secondary-color);
   display: block;
   padding: 7px 0px;
   font-size: 15px;
-  color: #024e76;
+  color: var(--secondary-color);
   width: 100%;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -146,8 +153,8 @@ footer a {
 }
 
 .hero-form button {
-  color: #fce138;
-  background-color: #024e76;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -161,11 +168,11 @@ footer a {
 
 .intro h2 {
   font-size: 55px;
-  color: #024e76;
+  color: var(--secondary-color);
   margin-bottom: 35px;
   padding: 50px 100px 20px 100px;
   border-bottom: 3px solid;
-  border-color: #fce138;
+  border-color: var(--primary-color);
 }
 
 .intro h2 {
@@ -175,7 +182,7 @@ footer a {
 
 .intro p {
   line-height: 1.7;
-  color: #39a6b2;
+  color: var(--tertiary-color);
   width: 80%;
   font-size: 20px;
   padding-bottom: 30px;
@@ -188,26 +195,26 @@ footer a {
 
 .steps {
   text-align: center;
-  background: #fce138;
+  background: var(--primary-color);
   padding-bottom: 50px;
 }
 
 .step:last-child {
-  border-bottom: 1px solid #39a6b2;
+  border-bottom: 1px solid var(--tertiary-color);
 }
 
 .steps h2 {
   font-size: 55px;
-  color: #024e76;
+  color: var(--secondary-color);
   margin-bottom: 35px;
   padding: 50px 100px 20px 100px;
   border-bottom: 3px solid;
-  border-color: #39a6b2;
+  border-color: var(--tertiary-color);
 }
 
 .section-title {
   font-size: 48px;
-  color: #024e76;
+  color: var(--secondary-color);
   margin-bottom: 35px;
   padding: 0 100px 20px 100px;
   display: inline-block;
@@ -215,11 +222,11 @@ footer a {
 }
 
 .primary-border {
-  border-color: #fce138;
+  border-color: var(--primary-color);
 }
 
 .secondary-border {
-  border-color: #39a6b2;
+  border-color: var(--tertiary-color);
 }
 
 .steps div {
@@ -232,13 +239,13 @@ footer a {
 }
 
 .steps h3 {
-  color: #024e76;
+  color: var(--secondary-color);
   font-size: 46px;
   margin-top: 10px;
 }
 
 .steps p {
-  color: #39a6b2;
+  color: var(--tertiary-color);
   font-size: 23px;
 }
 
@@ -255,8 +262,8 @@ footer a {
 .trainer {
   width: 900px;
   margin: 0 auto 50px auto;
-  background: #024e76;
-  color: #fce138;
+  background: var(--secondary-color);
+  color: var(--primary-color);
   overflow: auto;
 }
 
@@ -299,12 +306,12 @@ footer a {
 
 /* REACH OUT STYLES START */
 .contact {
-  background-color: #024e76;
+  background-color: var(--secondary-color);
   text-align: center;
 }
 
 .contact h2 {
-  color: #fce138;
+  color: var(--primary-color);
 }
 
 .section-title {
@@ -313,7 +320,7 @@ footer a {
   padding: 0 100px 20px 100px;
   border-bottom: 3px solid;
   margin-bottom: 35px;
-  color: #024e76;
+  color: var(--secondary-color);
 }
 
 .contact-info iframe {
@@ -331,7 +338,7 @@ footer a {
 }
 
 .contact-info h3 {
-  color: #fce138;
+  color: var(--primary-color);
   font-size: 32px;
 }
 
@@ -344,12 +351,12 @@ footer a {
 }
 
 .contact-info a {
-  color: #fce138;
+  color: var(--primary-color);
 }
 /*button*/
 .contact-form button:hover {
-  color: #fce138;
-  background: #39a6b2;
+  color: var(--primary-color);
+  background: var(--tertiary-color);
 }
 
 .contact-form input {
@@ -469,4 +476,51 @@ footer a {
 header h1 {
   /* add alongside your existing declarations */
   text-shadow: 0 0 10px rgba(0, 0, 0.5);
+}
+
+.checkbox-wrapper input,
+.radio-wrapper input {
+  opacity: 0;
+}
+
+.checkbox-wrapper label,
+.radio-wrapper label {
+  position: relative;
+  margin: 10px;
+  line-height: 1.6;
+}
+
+.checkbox-wrapper label::before,
+.radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--secondary-color);
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+
+.checkbox-wrapper label::after {
+  transform: rotate(-58deg);
+  background-image: radial-gradient(
+    circle,
+    var(--tertiary-color),
+    var(--secondary-color)
+  );
+}
+
+.checkbox-wrapper input:checked + label::after,
+.radio-wrapper input:checked + label::after {
+  content: none;
+}
+
+.checkbox-wrapper input:checked + label::after,
+.radio-wrapper input:checked + label::after {
+  content: "";
 }
